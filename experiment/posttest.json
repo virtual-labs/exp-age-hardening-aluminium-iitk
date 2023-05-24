@@ -2,12 +2,29 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. The Orowan stress (stress required to bypass the precipitate) is proportional to:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": ": r<sup>(-1)</sup>",
+        "b": "r<sup>(-3)</sup>",
+        "c": "r<sup>(-0.5)</sup>",
+        "d": "r"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Choose the correct sequence for precipitation treatment of aluminium alloy:",
+      "answers": {
+        "a": "Solution Treatment-->Quenching-->Aging ",
+        "b": "Aging-->Quenching-->Solution Treatment",
+        "c": "Solution Treatment-->Aging-->Quenching",
+        "d": "Quenching-->Solution Treatment-->Aging"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -16,6 +33,44 @@
         "d": "Explanation 2"
       },
       "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. How does hardness profile vary with ageing time?",
+      "answers": {
+        "a": "linearly increases with ageing time",
+        "b": "first decreasing to lowest then increases",
+        "c": "first increasing to peak then decreases",
+        "d": "linearly decreases with ageing time"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which of the following sequence is correct for the hardness of age hardened if the starting material is same?",
+      "a":"Under aged material"
+      "b":"Solution treated"
+      "C":"Peak aged material"
+      "D":"Over aged material"
+      "answers": {
+        "a": "A < B < D",
+        "b": "B < C <A",
+        "c": "D < B < C",
+        "d": "B < D < C"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "d",
       "difficulty": "beginner"
     },
     {
