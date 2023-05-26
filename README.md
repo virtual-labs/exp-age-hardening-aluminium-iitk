@@ -8,7 +8,7 @@
 
 ### About the Experiment 
 
-<b> 1. Brief Description of the Equipment/Machine:</b>
+<b> 1. Brief Description of the Equipment/Machine:</b></br>
 For heat treatment, a furnace is required. For hardness measurement, a Vickers hardness tester is to be used.
 
 <b>Name of Developer | <b> Prof. Sudhansu S. Singh , Prof. Shashank Shekhar
