@@ -10,7 +10,7 @@
       var SAMPLE_ASSETS_PATH = "images/sample/";
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
+
     <style>
       /* Add CSS rules for canvas positioning */
       canvas {
@@ -18,7 +18,13 @@
         vertical-align: top;
         /*margin-left: 10px; /* Adjust this value as needed */
       }
-      
+    </style>
+    <!-- Add CSS rules for canvas positioning (inside .canvas-container) -->
+    <style>
+      .canvas-container {
+        display: inline-block;
+        vertical-align: top;
+      }
     </style>
   </head>
   <body>
@@ -32,18 +38,18 @@
         <div class="nav-content">
           <div id="tools" class="nav-pane">
             <div class="list text-center">
-              <div>
-                <img label="utmMachine" src="images/img/utm-machine-logo.png" width="100" draggable="true" />
-                <p>UTM Machine</p>
+              <div class="mt-1">
+                <img label="furnaceMachine" src="images/img/closedfurnace1.png" width="100" draggable="true" />
+                <p>Furnace Machine</p>
               </div>
               <hr />
               <div>
-                <img label="vickersHardnessTester" src="images/img/vickers1.png" draggable="true" width="200" />
+                <img label="vickersHardnessTester" src="images/img/vickers1.png" draggable="true" width="100" />
                 <p>Vickers Hardness Tester</p>
               </div>
               <hr />
               <div>
-                <img label="sample" src="images/sample/aluminium-specimen.png" draggable="true" width="200" />
+                <img label="sample" src="images/sample/aluminium-specimen.png" draggable="true" width="80" />
                 <p>Aluminium Alloy Sample</p>
               </div>
               <hr />
@@ -53,11 +59,11 @@
           <div id="instr" class="nav-pane active">
             <div id="accordion" class="accordion">
               <div id="step1" class="box active">
-                <div class="label">Step 1: Placing of the utm Machine</div>
+                <div class="label">Step 1: Placing of the Furnace Machine</div>
                 <div class="content">
                   <ul>
-                    <li>Drag the utm machine.</li>
-                    <li>Right click on utm machine and click on pin.</li>
+                    <li>Drag the Furnace Machine from the tools.</li>
+                    <li>Right click on the machine and click on pin.</li>
                     <!--<li>Place the sample on the utm machine.</li>-->
                     <!--<li>Take the gauge length and enter it below:</li>-->
                   </ul>
@@ -65,7 +71,7 @@
                 </div>
               </div>
 
-             <!--<div id="step2" class="box disabled">
+              <!--<div id="step2" class="box disabled">
                 <div class="label">Step 2: Take the diameter of the sample</div>
                 <div class="content">
                   <ul>
@@ -80,12 +86,12 @@
               </div>-->
 
               <div id="step2" class="box disabled">
-                <div class="label">Step 2: Heating of the sample in utm Machine.</div>
+                <div class="label">Step 2: Heating of the sample in the Furnace Machine.</div>
                 <div class="content">
                   <ul>
-                    <li>Right click on the sample 
-                     and drag it close to the utm machine.</li>
-                    <li>Now,place the sample on the machine.</li>
+                    <li>Right click on the sample and drag it close to the furnace machine.</li>
+                    <li>Now,place the sample on the machine & click on pin.</li>
+                    <li>Keep all the solutionized samples in the furnace for aging at 470 deg C</li>
                     <li>You can adjust zoom level also (Via Mouse Wheel).</li>
                   </ul>
                 </div>
@@ -95,51 +101,70 @@
                 <div class="label">Step 3: Hardness Testing of the sample in Vickers.</div>
                 <div class="content">
                   <ul>
-                    <li>Right click on the sample 
-                     and drag it close to the Vickers Tester.</li>
-                    <li>Now,place the sample on the Vickers.</li>
+                    <li>Right click on the chamber of Furnace presented in the middle to unload the sample.</li>
+                    <li>Now,place the sample on the Vickers & click on pin.</li>
                     <li>You can adjust zoom level also (Via Mouse Wheel).</li>
                   </ul>
                 </div>
               </div>
-                
+
               <div id="step4" class="box disabled">
-                <div class="label">Step 4: Start the test.</div>
+                <div class="label">
+                  Step 4: Observation Of Indent impressions of Al alloy age hardened at different durations .
+                </div>
+                <div class="content">
+                  <!-- Table to display images -->
+                  <div class="mt-1 dataTable">
+                    <table id="imageTable">
+                      <thead>
+                        <tr>
+                          <th>Time (in hrs)</th>
+                          <th>Indent Impressions</th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
+                  </div>
+                  <ul>
+                    <li>Perform d1 & d2 measurement from indent impressions of Al alloy.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div id="step5" class="box disabled">
+                <div class="label">Step 5: Plot the graph.</div>
                 <div class="content">
                   <ul>
                     <li>Click below buttons to start the machine.</li>
-                  
-                   <ul><li>Test1 for 466.8 gf load at 120 deg C</li>
-                      
-                  </ul>
+
+                    <ul>
+                      <li>Test1 for 466.8 gf load at 120 deg C</li>
+                    </ul>
                   </ul>
                   <div class="mt-1">
                     <button id="startTest">Start Test</button>
                     <button id="showGraphBtn" onclick="showGraph()" disabled>Plot</button>
                   </div>
 
-                  <!<canvas id="outputGraphA"></canvas>> 
-                  <canvas id="graph1"></canvas>
-                  
+                  <canvas id="outputGraphA"></canvas>
+
                   <!-- Table 1 -->
                   <div class="mt-1 dataTable">
-                   <table> 
-        <thead>
-          <tr>
-            <td>Time in hrs</td>
-            <td>Hardness (HV)</td>
-          </tr>
-        </thead>
-        <tbody id="testData1"></tbody>
-      </table>
-    </div>
+                    <table>
+                      <thead>
+                        <tr>
+                          <td>Time in hrs</td>
+                          <td>Hardness (HV)</td>
+                        </tr>
+                      </thead>
+                      <tbody id="testData1"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
 
-    
-  </div>
-</div>
-
-              <div id="step5" class="box disabled">
-                <div class="label">Step 5: Activity.</div>
+              <div id="step6" class="box disabled">
+                <div class="label">Step 6: Activity.</div>
                 <div class="content">Click next button to continue.</div>
               </div>
 
@@ -155,7 +180,7 @@
                 </div>
               </div>-->
 
-             <!--<div id="step7" class="box disabled">
+              <!--<div id="step7" class="box disabled">
                 <div class="label">Step 7: Measure final diameter</div>
                 <div class="content">
                   <ul>
@@ -173,44 +198,19 @@
                 <div class="content"></div>
               </div>
             </div>-->
-            <div id="step6" class="box disabled">
-              <div class="label">Step 6: Results</div>
-              <div class="content">
-                <ul>
-                  <li>
-                    Indent impressions of Al alloy age hardened at different durations.
-                  </li>
-                </ul>
-                <img src="images/result/0h-1.png" alt="Step 6 Image 1" width="249" />
-                <img src="images/result/0.5h-1.png" alt="Step 6 Image 2" width="249" />
-                <img src="images/result/1h.png" alt="Step 6 Image 3" width="249" />
-                <img src="images/result/1.5h-1.png" alt="Step 6 Image 4" width="249" />
-                <img src="images/result/2.5h.png" alt="Step 6 Image 5" width="249" />
-                <img src="images/result/5h-1.png" alt="Step 6 Image 6" width="249" />
-                <img src="images/result/16h.png" alt="Step 6 Image 7" width="249" />
-                <img src="images/result/24h-1.png" alt="Step 6 Image 8" width="249" />
-                <img src="images/result/42h-1.png" alt="Step 6 Image 9" width="249" />
-                <img src="images/result/96h.png" alt="Step 6 Image 10" width="249" />
-                <img src="images/result/144h.png" alt="Step 6 Image 11" width="249" />
-                <img src="images/result/476h-1.png" alt="Step 6 Image 12" width="249" />
-                
+              <div id="step7" class="box disabled">
+                <div class="label">Step 7: Results</div>
+                <div class="content">
+                  <ul>
+                    <li>Time vs Hardness(HV).</li>
+                  </ul>
+                  <img src="images/hardness.png" alt="Step 7 Image 1" width="100%" />
+                </div>
               </div>
-            </div>
-            
-            <div class="canvas-container">
-              <canvas id="graph1"></canvas>
-              <canvas id="graph2"></canvas>
-              <canvas id="graph3"></canvas>
-            </div>
 
-            <!-- Add CSS rules for canvas positioning (inside .canvas-container) -->
-            <style>
-              .canvas-container {
-                display: inline-block;
-                vertical-align: top;
-              }
-            </style>
-          </div>
+
+              
+            </div>
 
             <div class="actions">
               <!-- <image src="images/arrow.png" width="25px" class="blink" id="arrowNext" /> -->
