@@ -7,7 +7,7 @@ var dragging = false;
 var draggedElement;
 var ctx;
 
-var utm = null;
+var furnace = null;
 var vickers = null;
 var sample1 = null;
 
@@ -19,7 +19,7 @@ function init() {
   ctx.font = "30px Arial";
   ctx.lineWidth = 1.5;
 
-  utm = UTM(canvas, ctx);
+  furnace = Furnace(canvas, ctx);
 
   vickers = Vickers(canvas, ctx);
 
@@ -63,7 +63,7 @@ function init() {
     }
 
     if (vickers) vickers.paint();
-    if (utm) utm.paint();
+    if (furnace) furnace.paint();
     if (sample1) sample1.paint();
   };
 
@@ -81,19 +81,19 @@ function resize() {
 }
 
 function onMouseDownHandler(event) {
-  if (utm) utm.onMouseDownHandler(event);
+  if (furnace) furnace.onMouseDownHandler(event);
   if (vickers) vickers.onMouseDownHandler(event);
   if (sample1) sample1.onMouseDownHandler(event);
 }
 
 function onMouseMoveHandler(event) {
-  if (utm) utm.onMouseMoveHandler(event);
+  if (furnace) furnace.onMouseMoveHandler(event);
   if (vickers) vickers.onMouseMoveHandler(event);
   if (sample1) sample1.onMouseMoveHandler(event);
 }
 
 function onMouseUpHandler(event) {
-  if (utm) utm.onMouseUpHandler(event);
+  if (furnace) furnace.onMouseUpHandler(event);
   if (vickers) vickers.onMouseUpHandler(event);
   if (sample1) sample1.onMouseUpHandler(event);
 }
@@ -102,7 +102,7 @@ function onContextMenuHandler(event) {
   event.preventDefault();
   event.stopPropagation();
 
-  if (utm) utm.onContextMenuHandler(event);
+  if (furnace) furnace.onContextMenuHandler(event);
   if (vickers) vickers.onContextMenuHandler(event);
   if (sample1) sample1.onContextMenuHandler(event);
 }
@@ -111,7 +111,7 @@ function onClickHandler(event) {
   event.preventDefault();
   event.stopPropagation();
 
-  if (utm) utm.onClickHandler(event);
+  if (furnace) furnace.onClickHandler(event);
   if (vickers) vickers.onClickHandler(event);
   if (sample1) sample1.onClickHandler(event);
 
@@ -123,7 +123,7 @@ function onMouseWheelHandler(event) {
   event.preventDefault();
   event.stopPropagation();
 
-  if (utm) utm.onMouseWheelHandler(event);
+  if (furnace) furnace.onMouseWheelHandler(event);
   if (vickers) vickers.onMouseWheelHandler(event);
   if (sample1) sample1.onMouseWheelHandler(event);
 }
@@ -132,8 +132,8 @@ function onElementDrop(event) {
   if (!draggedElement) return;
 
   switch (draggedElement.getAttribute("label")) {
-    case "utmMachine":
-      utm.init();
+    case "furnaceMachine":
+      furnace.init();
       break;
     case "Vickers":
       vc.init();
@@ -166,7 +166,7 @@ document.addEventListener("touchstart", (e) => {
   }
 
   let tar = e.touches[0].target;
-  if (tar.getAttribute("label") == "utmMachine" || tar.getAttribute("label") == "Vickers") {
+  if (tar.getAttribute("label") == "furnaceMachine" || tar.getAttribute("label") == "Vickers") {
     img = document.createElement("img");
     img.src = tar.src;
     img.setAttribute("label", tar.getAttribute("label"));
