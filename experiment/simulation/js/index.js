@@ -15,81 +15,6 @@ const readingData1 = [
   [476, 169],
 ];
 
-/*const readingData2 = [
-  [0.01, 0.41],
-  //[2.71, 0.45],
-  [4.94, 0.50],
-  //[7.13, 0.54],
-  [10.16, 0.57],
-  //[13.16, 0.60],
-  [16.27, 0.61],
-//[19.12, 0.63],
-  [22.09, 0.65],
-  //[25.07, 0.67],
-  [28.05, 0.68],
-  //[31.02, 0.70],
-  [34.00, 0.71],
-//[36.97, 0.73],
-  [39.90, 0.75],
-  //[42.93, 0.78],
-  [45.84, 0.79],
-  //[48.88, 0.81],
-  [51.86, 0.83],
-  //[54.93, 0.84],
-  [57.81, 0.86],
-  //[60.79, 0.88],
-  [63.76, 0.90],
-  //[66.93, 0.92],
-  [69.65, 0.94],
-  //[72.69, 0.96],
-  [75.73, 0.98],
-  //[78.78, 1.01],
-  [81.45, 1.03],
-  //[84.60, 1.06],
-  [87.18, 1.10],
-  //[89.71, 1.14],
-  [89.89, 1.10],
-  //[92.54, 1.16],
-  [94.78, 1.21],
-  //[95.52, 1.18],
-  [97.62, 1.24],
-  //[97.83, 1.19],
-  [99.99, 1.28],
-  //[101.29, 1.32],
-  [102.70, 1.38],
-  //[104.03, 1.45],
-  
-  
-
-
-
-
-];
-const readingData3 = [
-   [0.01, 0.87],
-   [0.02, 0.78],
-   [0.03, 0.75],
-   [1.12, 0.92],
-   [1.3, 0.83],
-   [1.61, 1.01],
-   [1.52, 0.97],
-   [3.57, 1.06],
-   [5.39, 1.11],
-   [7.21, 1.15],
-   [9.16, 1.19],
-   [10.70, 1.23],
-   [12.48, 1.31],
-   [12.17, 1.27],
-   [13.91, 1.36],
-   [15.08, 1.45],
-   [14.55, 1.40],
-   [15.80, 1.53],
-   [14.82, 1.49],
-   [16.13, 1.59],
-
-
-];*/
-
 // x axis
 const time = [0, 0.5, 1, 1.5, 2.5, 5, 16, 24, 42, 96, 144, 476];
 // y axis
@@ -308,7 +233,7 @@ function handleStep4() {
         clearInterval(intr);
         document.getElementById("startTest").disabled = false;
         document.getElementById("startTest").innerHTML = "Done";
-        document.getElementById("showGraphBtn").disabled = false;
+        // document.getElementById("showGraphBtn").disabled = false;
         furnace.stop();
         document.getElementById("btnNext").disabled = false;
         // document.getElementById("arrowNext").classList.remove("disabled");
@@ -365,63 +290,6 @@ function handleStep5() {
 
   currentStepProgress = 6;
   vickers.destory();
-  modal = new Modal({
-    title: "Can you answer the questions?",
-    body: [
-      {
-        page: 1,
-        title: " The first step in the age-hardening treatment is ?",
-        image: "images/hardness.png",
-        options: [" Solution treatment", "Quenching", "Aging at higher temperature", "Recrystallization"],
-        correct: 0,
-      },
-      {
-        page: 2,
-        title: "Choose the correct sequence for precipitation treatment of aluminium alloy?",
-        image: "images/hardness.png",
-        options: [
-          " Solution Treatment-->Quenching-->Aging",
-          "Aging-->Quenching-->Solution Treatment",
-          " Solution Treatment-->Aging-->Quenching",
-          "Quenching-->Solution Treatment-->Aging",
-        ],
-        correct: 0,
-      },
-      {
-        page: 3,
-        title: "How does hardness profile vary with ageing time?",
-        image: "images/hardness.png",
-        options: [
-          "linearly increases with ageing time",
-          "first decreasing to lowest then increases",
-          "first increasing to peak then decreases",
-          "linearly decreases with ageing time",
-        ],
-        correct: 2,
-      },
-      {
-        page: 4,
-        title: "Which of the following is incorrect?",
-        image: "images/hardness.png",
-        options: [
-          " Hardness is affected by size of the precipitates",
-          "Hardness is not affected by the aging temperature",
-          "Hardness is affected by the amount of solute in the solid solution",
-          "Hardness is affected by the nature of the interface with the matrix",
-        ],
-        correct: 1,
-      },
-      {
-        page: 5,
-        title: "Which test is typically used to obtain aging curve for aluminum alloys?",
-        image: "images/hardness.png",
-        options: ["Vickers hardness test", "Brinell hardness test", "Tensile test", "Impact test"],
-        correct: 0,
-      },
-    ],
-    onClose: handleStep6,
-  });
-  modal.show();
 }
 
 function handleStep6() {
@@ -438,95 +306,65 @@ function handleStep6() {
 
   //if (vc) vc.init();
   if (furnace) furnace.destory();
-  //if (sample1) sample1.init();
-
-  /*function handleStep6() {
-  let pane = document.getElementById("step6");
-
-  pane.classList.add("done");
-  pane.classList.remove("active");
-
-  let next = document.getElementById("step7");
-  next.classList.add("active");
-  next.classList.remove("disabled");
-
-  currentStepProgress = 7;*/
-}
-
-/*function handleStep7() {
-  let pane = document.getElementById("step7");
-
-  pane.classList.add("done");
-  pane.classList.remove("active");
-
-  let next = document.getElementById("step8");
-  next.classList.add("active");
-  next.classList.remove("disabled");
-
-  //last
-  document.getElementById("btnNext").disabled = true;
-  // document.getElementById("arrowNext").classList.add("disabled");
-  document.querySelector("#step8 .content").innerHTML = `
-    <table>
-      <tr>
-        <td>Initial Length</td>
-        <td>${sampleLength} mm</td>
-      </tr>
-      <tr>
-        <td>Initial Diameter</td>
-        <td>${sampleDiameter} mm</td>
-      </tr>
-      <tr>
-        <td>Final Length</td>
-        <td>~${sampleLength} mm</td>
-      </tr>
-      <tr>
-        <td>Final Diameter</td>
-        <td>~${sampleDiameter} mm</td>
-      </tr>
-    </table>
-  `;
-}*/
-function handleStep7() {
-  let pane = document.getElementById("step7");
-
-  pane.classList.add("active");
-  pane.classList.remove("disabled");
-
-  let step7Content = document.querySelector("#step7 .content");
-  step7Content.innerHTML = ""; // Clear existing content
-
-  // Add PNG images to Step 6
-  const pngImages = [
-    "images/result/0h-1.png",
-    "images/result/0.5h-1.png",
-    "images/result/1h.png",
-    "images/result/1.5h-1.png",
-    "images/result/2.5h.png",
-    "images/result/5h-1.png",
-    "images/result/16h.png",
-    "images/result/24h-1.png",
-    "images/result/42h-1.png",
-    "images/result/96h.png",
-    "images/result/144h.png",
-    "images/result/476h-1.png",
-    // Add more image paths as needed
-  ];
-
-  pngImages.forEach((imagePath) => {
-    const imgElement = document.createElement("img");
-    imgElement.src = imagePath;
-    imgElement.alt = "Step 7 Image";
-    imgElement.width = 300; // Adjust width as needed
-    step7Content.appendChild(imgElement);
+ 
+  modal = new Modal({
+    title: "Can you answer the questions?",
+    body: [
+      {
+        page: 1,
+        title: " The first step in the age-hardening treatment is ?",
+        options: [" Solution treatment", "Quenching", "Aging at higher temperature", "Recrystallization"],
+        correct: 0,
+      },
+      {
+        page: 2,
+        title: "Choose the correct sequence for precipitation treatment of aluminium alloy?",
+        options: [
+          " Solution Treatment-->Quenching-->Aging",
+          "Aging-->Quenching-->Solution Treatment",
+          " Solution Treatment-->Aging-->Quenching",
+          "Quenching-->Solution Treatment-->Aging",
+        ],
+        correct: 0,
+      },
+      {
+        page: 3,
+        title: "How does hardness profile vary with ageing time?",
+        options: [
+          "linearly increases with ageing time",
+          "first decreasing to lowest then increases",
+          "first increasing to peak then decreases",
+          "linearly decreases with ageing time",
+        ],
+        correct: 2,
+      },
+      {
+        page: 4,
+        title: "Which of the following is incorrect?",
+        options: [
+          " Hardness is affected by size of the precipitates",
+          "Hardness is not affected by the aging temperature",
+          "Hardness is affected by the amount of solute in the solid solution",
+          "Hardness is affected by the nature of the interface with the matrix",
+        ],
+        correct: 1,
+      },
+      {
+        page: 5,
+        title: "Which test is typically used to obtain aging curve for aluminum alloys?",
+        options: ["Vickers hardness test", "Brinell hardness test", "Tensile test", "Impact test"],
+        correct: 0,
+      },
+    ],
+    onClose: () => {
+      document.getElementById('btnNext').disabled = true;
+      document.getElementById('btnNext').innerHTML = 'Finished';
+      let pane = document.getElementById("step7");
+      pane.classList.add("done");
+      pane.classList.remove("active");
+    },
   });
-
-  currentStepProgress = 7;
-
-  let btnNext = document.getElementById("btnNext");
-  btnNext.disabled = true;
-  btnNext.innerHTML = "Finish";
-
+  modal.show();
 }
 
 function plotGraph(graphCtx, data, labelX, labelY) {
@@ -590,7 +428,7 @@ function showGraph() {
       {
         page: 1,
         title: "Age Hardening in Aluminium Alloy",
-        image: "images/hardness.png",
+        image: "images/hardness2.jpg",
       },
     ],
   });

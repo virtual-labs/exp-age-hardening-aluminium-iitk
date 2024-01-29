@@ -29,7 +29,7 @@ function Furnace(canvas, ctx) {
     finish_point: 1,
   };
 
-  let scale = 1.1;
+  let scale = 1;
   let flashArrow = true;
 
   // let startX = 0;
@@ -384,7 +384,7 @@ function Sample1(canvas, ctx) {
   let menuRotateText = ["Rotate", "Rotate back"];
   let menuRotateIcon = [ContextMenu.rotateRight, ContextMenu.rotateLeft];
 
-  let scale = 0.6;
+  let scale = 0.5;
 
   let isActive = false;
 
@@ -685,7 +685,7 @@ function Vickers(canvas, ctx) {
     finish_point: 1,
   };
 
-  let scale = 1.1;
+  let scale = 1;
   let flashArrow = true;
 
   // let startX = 0;
