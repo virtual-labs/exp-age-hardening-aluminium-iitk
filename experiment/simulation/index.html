@@ -40,7 +40,7 @@
             <div class="list text-center">
               <div class="mt-1">
                 <img label="furnaceMachine" src="images/img/closedfurnace1.png" width="100" draggable="true" />
-                <p>Furnace Machine</p>
+                <p>Furnace</p>
               </div>
               <hr />
               <div>
@@ -59,11 +59,11 @@
           <div id="instr" class="nav-pane active">
             <div id="accordion" class="accordion">
               <div id="step1" class="box active">
-                <div class="label">Step 1: Placing of the Furnace Machine</div>
+                <div class="label">Step 1: Placing of the Furnace</div>
                 <div class="content">
                   <ul>
-                    <li>Drag the Furnace Machine from the tools.</li>
-                    <li>Right click on the machine and click on pin.</li>
+                    <li>Drag the Furnace from the tools.</li>
+                    <li>Right click on the furnace and click on pin.</li>
                     <!--<li>Place the sample on the utm machine.</li>-->
                     <!--<li>Take the gauge length and enter it below:</li>-->
                   </ul>
@@ -71,27 +71,13 @@
                 </div>
               </div>
 
-              <!--<div id="step2" class="box disabled">
-                <div class="label">Step 2: Take the diameter of the sample</div>
-                <div class="content">
-                  <ul>
-                    <li>Right click on vernier caliper and click on unload sample.</li>
-                    <li>Now, Right click on sample and click on rotate.</li>
-                    <li>Place the sample on the vernier caliper.</li>
-                    <li>Take the diameter and enter it below:</li>
-                  </ul>
-
-                  <div class="mt-1">Diameter: <input id="step2Dia" type="number" value="" /> mm</div>
-                </div>
-              </div>-->
-
               <div id="step2" class="box disabled">
-                <div class="label">Step 2: Heating of the sample in the Furnace Machine.</div>
+                <div class="label">Step 2: Heating of the sample in the Furnace.</div>
                 <div class="content">
                   <ul>
-                    <li>Right click on the sample and drag it close to the furnace machine.</li>
+                    <li>Right click on the sample and drag it close to the furnace.</li>
                     <li>Now,place the sample on the machine & click on pin.</li>
-                    <li>Keep all the solutionized samples in the furnace for aging at 470 deg C</li>
+                    <li>Keep all the solutionized samples in the furnace for aging at 120 deg C</li>
                     <li>You can adjust zoom level also (Via Mouse Wheel).</li>
                   </ul>
                 </div>
@@ -143,7 +129,7 @@
                   </ul>
                   <div class="mt-1">
                     <button id="startTest">Start Test</button>
-                    <button id="showGraphBtn" onclick="showGraph()" disabled>Plot</button>
+                    <!-- <button id="showGraphBtn" onclick="showGraph()" disabled>Plot</button> -->
                   </div>
 
                   <canvas id="outputGraphA"></canvas>
@@ -163,52 +149,23 @@
                 </div>
               </div>
 
-              <div id="step6" class="box disabled">
-                <div class="label">Step 6: Activity.</div>
+              <div id="step6" class="box disabled2">
+                <div class="label">Step 6: Results</div>
+                <div class="content">
+                  <h4>Aging curve of aluminum alloy at 120℃</h4>
+                  <ul>
+                    <li>
+                      Peak-hardness = 177 HV
+                    </li>
+                  </ul>
+                  <img src="images/hardness2.jpg" alt="Step 7 Image 1" width="100%" />
+                </div>
+              </div>
+
+              <div id="step7" class="box disabled">
+                <div class="label">Step 7: Activity.</div>
                 <div class="content">Click next button to continue.</div>
               </div>
-
-              <!--<div id="step6" class="box disabled">
-                <div class="label">Step 6: Measure final length.</div>
-                <div class="content">
-                  <ul>
-                    <li>Right click on vernier caliper and click on "Pin"</li>
-                    <li>Place the sample on the venier caliper and take the length.</li>
-                  </ul>
-
-                  <div class="mt-1">Change in length is negligible.</div>
-                </div>
-              </div>-->
-
-              <!--<div id="step7" class="box disabled">
-                <div class="label">Step 7: Measure final diameter</div>
-                <div class="content">
-                  <ul>
-                    <li>Right click on venier caliper and click on unload sample.</li>
-                    <li>Now, Right click on sample and click on rotate.</li>
-                    <li>Place the sample on the venier caliper and take the diameter.</li>
-                  </ul>
-
-                  <div class="mt-1">Change in diameter is negligible.</div>
-                </div>
-              </div>
-
-              <div id="step8" class="box disabled">
-                <div class="label">Step 8: Results</div>
-                <div class="content"></div>
-              </div>
-            </div>-->
-              <div id="step7" class="box disabled">
-                <div class="label">Step 7: Results</div>
-                <div class="content">
-                  <ul>
-                    <li>Time vs Hardness(HV).</li>
-                  </ul>
-                  <img src="images/hardness.png" alt="Step 7 Image 1" width="100%" />
-                </div>
-              </div>
-
-
               
             </div>
 
