@@ -88,10 +88,7 @@ class Popover {
 
       document.body.insertAdjacentHTML("beforeend", html);
 
-      document
-        .getElementById(this.id)
-        .querySelector(".popover-buttons button")
-        .addEventListener("click", this.callback);
+      document.getElementById(this.id).querySelector(".popover-buttons button").addEventListener("click", this.callback);
     }
   }
 }
