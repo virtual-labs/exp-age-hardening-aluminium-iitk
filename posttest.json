@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. The Orowan stress (stress required to bypass the precipitate) is proportional to:",
+      "answers": {
+        "a": ": r<sup>(-1)</sup>",
+        "b": "r<sup>(-3)</sup>",
+        "c": "r<sup>(-0.5)</sup>",
+        "d": "r"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Choose the correct sequence for precipitation treatment of aluminium alloy:",
+      "answers": {
+        "a": "Solution Treatment-->Quenching-->Aging ",
+        "b": "Aging-->Quenching-->Solution Treatment",
+        "c": "Solution Treatment-->Aging-->Quenching",
+        "d": "Quenching-->Solution Treatment-->Aging"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. How does hardness profile vary with ageing time?",
+      "answers": {
+        "a": "linearly increases with ageing time",
+        "b": "first decreasing to lowest then increases",
+        "c": "first increasing to peak then decreases",
+        "d": "linearly decreases with ageing time"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which test is typically used to obtain aging curve for aluminum alloys?",
+      "answers": {
+        "a": "Vickers hardness test",
+        "b": "Brinell hardness test",
+        "c": "Tensile test",
+        "d": "Impact test"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "1",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. Which of the following is incorrect?",
+      "answers": {
+        "a": "Hardness is affected by size of the precipitates",
+        "b": "Hardness is not affected by the aging temperature",
+        "c": "Hardness is affected by the amount of solute in the solid solution",
+        "d": "Hardness is affected by the nature of the interface with the matrix"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}

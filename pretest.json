@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. The first step in the age-hardening treatment is:",
+      "answers": {
+        "a": "Solution treatment",
+        "b": "Quenching",
+        "c": "Aging at higher temperature",
+        "d": "Recrystallization"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. In a material, a shear stress of 400 MPa is required to cut the precipitate of diameter 4 µm. If the precipitate size is increased to 16 µm, the shear stress (in MPa) to cut the precipitate would be:",
+      "answers": {
+        "a": "200",
+        "b": "1600",
+        "c": "800",
+        "d": "100"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. The shearing stress is proportional to:",
+      "answers": {
+        "a": "r<sup>(-1)</sup>",
+        "b": "r<sup>(-3)</sup>",
+        "c": "r<sup>(-0.5)</sup>",
+        "d": "r"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }, 
+    {
+      "question": "Consider Al - 4 wt. % Cu alloy. The sequence of precipitation is:",
+      "answers": {
+        "a": "α → GP → θ” → θ’→ θ",
+        "b": "α → GP → θ’ → θ → θ”",
+        "c": "α → GP → θ’ → θ” → θ",
+        "d": "α → GP → θ → θ’ → θ”"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "If the load applied is 0.5 kgf and indentation size (diagonal length) is 86 µm, The Vickers hardness (in HV) is:",
+      "answers": {
+        "a": "400",
+        "b": "1228",
+        "c": "125",
+        "d": "108"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+  ]
+}
