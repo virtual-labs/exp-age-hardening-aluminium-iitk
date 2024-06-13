@@ -17,5 +17,14 @@ Overall, with the aging time the size of the precipitates increases and the inte
 <b>The aging curve</b><br> 
 After aging treatment, samples are subjected to Vickers hardness measurement. The typical shape of the aging curve is shown in Fig. 4a, where the hardness is observed to first increase and then decrease with aging time. The alloy with the highest hardness corresponds to the peak-aged condition. Below and above this hardness/time, the alloy is in under-aged and over-aged conditions, respectively. The shape of the aging curve (Fig. 4a) can be explained as follows: Immediately after quenching, only solid-solution-hardening is present. As GP zones form, hardness or strength increases because extra stress is needed to make dislocations shear the coherent zones. The hardness increases as the size of the GP zones increases (as stress is proportional to (r)), making it even more difficult for the dislocations to shear the zones. As time goes on, incoherent equilibrium precipitates start appearing, and the mechanism of Orowan bowing (bypassing) of dislocations around the precipitates becomes operative. Thus, in the initial aging time (under-aged condition), shearing of the precipitates dominates over bypassing of the dislocations (Fig. 4b). At the later stage of aging (over-aged condition), bypassing of the dislocations dominates over shearing. The peak hardness or strength is associated with a critical dispersion of coherent or semicoherent precipitates. Further aging increases the interparticle distance, and a lower strength results as dislocation bowing becomes easier.<br>
 <image src="images/image3.png"><br><br>
+Fig. 5 shows the evolution of precipitates with time in Al-Cu alloys [1]. One can observe that the size of precipitates increases with aging time. Fig. 6 shows cutting of precipitates by dislocations and bypassing of dislocations [2].<br>
+<image src="image/image5.JPG"><br>
+Fig. 5 Microstructure at different stages during aging of Al-Cu alloys<br>
+<image src="image/image6.JPG"><br>
+Fig. 6 Cutting of precipitates by dislocations and bypassing of dislocations and loop formation<br>
 
+
+[1] David A. Porter, Kenneth E. Easterling, Phase Transformations in Metals and Alloys (2009)<br>
+[2] Ashby, Shercliff, Cebon, Materials: engineering, science, processing and design (2013);<br>
+Humphreys and Hatherly, Recrystallization and related annealing phenomena (2004)
 
